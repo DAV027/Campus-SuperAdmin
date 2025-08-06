@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Test</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/managers.css">
+</head>
+<body>
+  <div class="p-8">
+    <h1 class="text-2xl font-bold mb-4">Modal Input Field Test</h1>
+    
+    <button onclick="testModal()" class="btn btn-primary">
+      Test Modal with Input Fields
+    </button>
+    
+    <div class="mt-4">
+      <h2 class="text-lg font-semibold mb-2">Direct Input Test:</h2>
+      <div class="space-y-4 max-w-md">
+        <div>
+          <label class="form-label">Test Input Field</label>
+          <input type="text" class="form-input" placeholder="Type something here..." value="Test Value">
+        </div>
+        <div>
+          <label class="form-label">Test Select Field</label>
+          <select class="form-select">
+            <option value="">Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals container -->
+  <div id="modals-container"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  
+  <script>
+    function testModal() {
+      const modalId = 'testModal';
+      
+      // Remove existing modal
+      const existingModal = document.getElementById(modalId);
+      if (existingModal) {
+        existingModal.remove();
+      }
+      
+      // Create modal container
+      const modalsContainer = document.getElementById('modals-container');
+      if (!modalsContainer) {
+        console.error('Modals container not found');
+        return;
+      }
+      
+      const modal = document.createElement('div');
+      modal.id = modalId;
+      modal.className = 'modal-overlay';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">
+              Test Modal with Input Fields
+            </h3>
+            <button type="button" class="modal-close" onclick="closeModal('${modalId}')">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <form class="space-y-4">
+              <div>
+                <label class="form-label">Name *</label>
+                <input type="text" class="form-input" placeholder="Enter your name" value="John Doe">
+              </div>
+              
+              <div>
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-input" placeholder="Enter your email" value="john@example.com">
+              </div>
+              
+              <div>
+                <label class="form-label">Phone *</label>
+                <input type="tel" class="form-input" placeholder="Enter your phone" value="+1234567890">
+              </div>
+              
+              <div>
+                <label class="form-label">Role *</label>
+                <select class="form-select">
+                  <option value="">Select Role</option>
+                  <option value="Manager" selected>Manager</option>
+                  <option value="Admin">Admin</option>
+                  <option value="Team Lead">Team Lead</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" onclick="closeModal('${modalId}')" class="btn btn-secondary">
+              Cancel
+            </button>
+            <button type="button" onclick="alert('Form would be saved here')" class="btn btn-primary">
+              Save
+            </button>
+          </div>
+        </div>
+      `;
+      
+      // Add click outside to close functionality
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal(modalId);
+        }
+      });
+      
+      modalsContainer.appendChild(modal);
+      openModal(modalId);
+      
+      // Focus on first input
+      setTimeout(() => {
+        const firstInput = modal.querySelector('input');
+        if (firstInput) {
+          firstInput.focus();
+          firstInput.select();
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>
