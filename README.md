@@ -8,7 +8,6 @@ A web-based administrative dashboard for managing users, work assignments, track
 
 ## 🚀 Features
 
-- 🔐 Super Admin login and session management
 - 👥 User Management: View, filter, assign, and import/export users
 - 📄 Work Data: Tabbed view for All Users / Assigned Users
 - 🔎 Filter by Source: LinkedIn, Naukri, Personal
@@ -60,7 +59,6 @@ src/
 - Maven 3+
 - MySQL 8+
 - Eclipse IDE with Spring Tools
-- GitHub account (optional for version control)
 
 
 
@@ -68,8 +66,8 @@ src/
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/campus1-admin-dashboard.git
-   cd campus1-admin-dashboard
+   git clone https://github.com/DAV027/Campus1-Super-Admin.git
+   cd superadmin-1
    ```
 
 2. **Configure MySQL**
@@ -84,7 +82,7 @@ src/
      ```
 
 3. **Run the app**
-   - In Eclipse, right-click project → Run As → Spring Boot App
+   - In Eclipse, right-click project → Run As → Java Application
    - Or using terminal:
      ```bash
      mvn spring-boot:run
@@ -106,8 +104,6 @@ Required headers in Excel:
 - Name
 - Email
 - Contact
-- Source
-
 
 
 
