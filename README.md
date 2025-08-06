@@ -5,7 +5,6 @@
 
 A web-based administrative dashboard for managing users, work assignments, tracking systems, and notifications, built with **Spring Boot (Java)** and **vanilla HTML, CSS, and JavaScript**.
 
-```
 
 ## 🚀 Features
 
@@ -19,8 +18,8 @@ A web-based administrative dashboard for managing users, work assignments, track
 - 🔔 Real-time Notifications (coming soon)
 - 📅 Timestamp Display (top-right clock with date)
 
-```
-```
+
+
 
 ## 🛠️ Tech Stack
 
@@ -34,7 +33,7 @@ A web-based administrative dashboard for managing users, work assignments, track
 | File Upload    | Apache POI for Excel             |
 | Logging        | SLF4J + Logback                  |
 
-```
+
 
 ## 📁 Project Structure (Backend)
 
@@ -54,7 +53,7 @@ src/
 └── pom.xml
 ```
 
-```
+
 
 ## 📦 Setup Instructions
 
@@ -66,7 +65,7 @@ src/
 - Eclipse IDE with Spring Tools
 - GitHub account (optional for version control)
 
-```
+
 
 ### 🔧 Local Setup
 
@@ -100,7 +99,7 @@ src/
 
 
 ## 📤 Upload Excel Format
-```
+
 > Supported file: `.xlsx` (Apache POI)
 
 Required headers in Excel:
@@ -110,7 +109,7 @@ Required headers in Excel:
 - Contact
 - Source
 
-```
+
 
 
 ## 🧩 Future Enhancements
