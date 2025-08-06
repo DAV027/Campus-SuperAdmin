@@ -43,12 +43,11 @@ src/
 │   │   ├── controller/
 │   │   ├── service/
 │   │   ├── repository/
-│   │   ├── model/
-│   │   └── config/
+│   │   └── model/
 │   └── resources/
 │       ├── static/         # HTML, JS, CSS
 │       ├── templates/      # JSP files (if used)
-│       ├── application.properties
+│       └── application.properties
 └── pom.xml
 ```
 
