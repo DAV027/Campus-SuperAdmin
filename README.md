@@ -30,7 +30,6 @@ A web-based administrative dashboard for managing users, work assignments, track
 | View Engine    | JSP / Static HTML                |
 | Database       | MySQL                            |
 | File Upload    | Apache POI for Excel             |
-| Logging        | SLF4J + Logback                  |
 
 
 
