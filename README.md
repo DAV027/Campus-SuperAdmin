@@ -29,7 +29,6 @@ A web-based administrative dashboard for managing users, work assignments, track
 | Frontend       | HTML, CSS, JavaScript            |
 | View Engine    | JSP / Static HTML                |
 | Database       | MySQL                            |
-| Authentication | Spring Security (session-based)  |
 | File Upload    | Apache POI for Excel             |
 | Logging        | SLF4J + Logback                  |
 
@@ -76,12 +75,14 @@ src/
    ```
 
 2. **Configure MySQL**
-   - Create a database (e.g., `campus_dashboard`)
+   - Create a database (e.g., `superadmin`)
    - Update `application.properties`:
      ```
-     spring.datasource.url=jdbc:mysql://localhost:3306/campus_dashboard
+     spring.datasource.url=jdbc:mysql://localhost:3306/superadmin
      spring.datasource.username=root
      spring.datasource.password=your_password
+     spring.mail.username=your_email_id
+     spring.mail.password=your_app_password
      ```
 
 3. **Run the app**
